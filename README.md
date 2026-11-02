@@ -11,7 +11,7 @@ Equipo conformado por:
 Enlace: https://gemini.google.com/share/d/1nmMf0PvutCcCq-e7wbLkMn48FGbPzmQR?usp=sharing
 
 ![Inicio de la conversación](demostraciones/gemini_inicio.png)
-![Cierre de la conversación](demostraciones/gemini_final.png)
+![Cierre de la conversación](demostraciones/gemini_fin.png)
 
 ### Demostración en CMD
 Comandos: `start notepad.exe` → `tasklist /FI "IMAGENAME eq notepad.exe"` → `taskkill /F /PID <PID>`
