@@ -10,9 +10,9 @@ sem_t semBC;
 
 // Hilo A: Desarrollado por Integrante 1
 void* HiloA(void* arg) {
-    printf("[Hilo A] Paso 1: Iniciando preparación de datos...\n");
+    printf("[Hilo A - Dev: Juan Pablo Rodriguez] Paso 1: Iniciando preparación de datos...\n");
     sleep(1); // Simula tiempo de procesamiento (1 segundo)
-    printf("[Hilo A] Paso 1: Datos listos. Liberando Hilo B.\n");
+    printf("[Hilo A - Dev: Juan Pablo Rodriguez] Paso 1: Datos listos. Liberando Hilo B.\n");
     
     // Incrementar semáforo semAB (V / Signal)
     sem_post(&semAB);
