@@ -30,12 +30,17 @@ void* HiloA(void* arg) {
 void* HiloB(void* arg) {
     int cifra_b = 25;
     
-    // TO-DO Esperar a que Hilo C haya leído Cifra 1 y limpiado la variable
-    
-    // TO-DO Proteger escritura con Mutex y actualizar variable compartida
-   
-    
-    // TO-DO Notificar a Hilo C
+    //Esperar a que hilo C haya leído Cifra 1 y limpiado la variable
+	sem_wait(&semC_B);
+
+	//Proteger escritura con Mutex y actualizar variable compartida
+	pthread_mutex_lock(&mutex_variable);
+	variable_compartida = cifra_b;
+	printf("[Hilo B - Dev: Luis Terrones] Paso 3: Escribe Cifra 2 = %d en variable_compartida\n", cifra_b);
+	pthread_mutex_unlock(&mutex_variable);
+
+	//Notificar a Hilo C
+	sem_post(&semB_C);
 	
     return NULL;
 }
