@@ -38,9 +38,9 @@ void* HiloC(void* arg) {
     // Esperar señal de B (P / Wait)
     sem_wait(&semBC);
     
-    printf("[Hilo C] Paso 3: Consolidando y mostrando resultados finales.\n");
+    printf("[Hilo C - Dev: Renzo Gallardo] Paso 3: Consolidando y mostrando resultados finales.\n");
     sleep(1);
-    printf("[Hilo C] Paso 3: Proceso completo finalizado exitosamente.\n");
+    printf("[Hilo C - Dev: Renzo Gallardo] Paso 3: Proceso completo finalizado exitosamente.\n");
     
     pthread_exit(NULL);
 }
