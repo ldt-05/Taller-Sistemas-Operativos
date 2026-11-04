@@ -24,8 +24,9 @@ void* HiloB(void* arg) {
     // Esperar señal de A (P / Wait)
     sem_wait(&semAB);
     
-    printf("Hilo B - Dev: Luis Terrones\n");
+    printf("[Hilo B - Dev: Luis Terrones] Paso 2: Procesando información de Hilo A...\n");
     sleep(1);
+    printf("[Hilo B - Dev: Luis Terrones] Paso 2: Procesamiento terminado. Liberando Hilo C\n");
     
     // Incrementar semáforo semBC (V / Signal)
     sem_post(&semBC);
